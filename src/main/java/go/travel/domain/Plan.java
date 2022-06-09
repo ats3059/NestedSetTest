@@ -18,8 +18,8 @@ public class Plan {
     @JoinColumn(name = "travel_id")
     private Travel travel;
 
-    @OneToMany(mappedBy = "plan")
-    private List<PlanDetail> planDetails = new ArrayList<>();
+//    @OneToMany(mappedBy = "plan")
+//    private List<PlanDetail> planDetails = new ArrayList<>();
 
     private Integer days;
 

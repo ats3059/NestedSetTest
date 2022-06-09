@@ -25,9 +25,9 @@ public class Country {
     private String countryStatus;
     private String countryName;
 
-
-    @OneToMany(mappedBy = "country")
-    private List<Travel> travels = new ArrayList<>();
+//
+//    @OneToMany(mappedBy = "country")
+//    private List<Travel> travels = new ArrayList<>();
 
 
 }

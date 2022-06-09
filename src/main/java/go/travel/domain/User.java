@@ -22,6 +22,6 @@ public class User {
     @Enumerated(EnumType.STRING)
     private UserRole userRole;
 
-    @OneToMany(mappedBy = "user")
-    private List<Member> members = new ArrayList<>();
+//    @OneToMany(mappedBy = "user")
+//    private List<Member> members = new ArrayList<>();
 }

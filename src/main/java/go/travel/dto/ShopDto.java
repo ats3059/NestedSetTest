@@ -28,4 +28,11 @@ public class ShopDto {
     List<ShopDto> shops = new ArrayList<>();
     private Integer depth;
 
+
+    private List<ShopDto> existChild(Shop shop) {
+        return shop.getShops().stream()
+                .filter((child) -> child.getRgt() - child.getLft() != -1)
+                .map(ShopDto::new).collect(Collectors.toList());
+    }
+
 }

@@ -29,8 +29,8 @@ public class Travel {
     private LocalDateTime startDate;
     private LocalDateTime endDate;
 
-    @OneToMany(mappedBy = "travel")
-    private List<Plan> plans = new ArrayList<>();
+//    @OneToMany(mappedBy = "travel")
+//    private List<Plan> plans = new ArrayList<>();
 
 
 }
