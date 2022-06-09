@@ -2,13 +2,8 @@ package go.travel;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.querydsl.jpa.impl.JPAQuery;
 import com.querydsl.jpa.impl.JPAQueryFactory;
-import go.travel.domain.Country;
-import go.travel.domain.Menu;
-import go.travel.domain.QShop;
 import go.travel.domain.Shop;
-import go.travel.dto.ShopDto;
 import go.travel.repository.MemberRepository;
 import go.travel.repository.TestRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -19,11 +14,6 @@ import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
-import java.util.List;
-import java.util.stream.Collectors;
-
-import static go.travel.domain.QCountry.country;
-import static go.travel.domain.QMenu.menu;
 import static go.travel.domain.QShop.shop;
 
 @SpringBootTest
