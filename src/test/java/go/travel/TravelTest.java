@@ -97,8 +97,6 @@ public class TravelTest {
         testRepository.menuUpdate(depth3_2,depth2_1.getId());
         em.persist(depth2_1);
 
-
-
         Shop depth2_2 = query.selectFrom(shop).where(shop.id.eq(3)).fetchOne();
         Shop depth3_3 = new Shop(depth2_2,"미국");
         Shop depth3_4 = new Shop(depth2_2,"프랑스");
