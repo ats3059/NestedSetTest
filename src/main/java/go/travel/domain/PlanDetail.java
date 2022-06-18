@@ -22,6 +22,11 @@ public class PlanDetail {
     private String cost;
     private String memo;
 
+    @Column(name = "position_x")
+    private Integer positionX;
+    @Column(name = "position_y")
+    private Integer positionY;
+
     @Enumerated(EnumType.STRING)
     private Vehicle vehicle;
     private LocalTime time;

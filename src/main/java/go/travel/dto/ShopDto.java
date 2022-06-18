@@ -1,5 +1,6 @@
 package go.travel.dto;
 
+import com.querydsl.core.annotations.QueryProjection;
 import go.travel.domain.Shop;
 import lombok.Getter;
 
@@ -9,6 +10,14 @@ import java.util.stream.Collectors;
 
 @Getter
 public class ShopDto {
+
+    @QueryProjection
+    public ShopDto(String shopRole, Integer lft, Integer rgt, Integer depth) {
+        this.shopRole = shopRole;
+        this.lft = lft;
+        this.rgt = rgt;
+        this.depth = depth;
+    }
 
     public ShopDto(Shop shop) {
         this.id = shop.getId();

@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.time.LocalDateTime;
 
 @RestController
@@ -20,6 +22,8 @@ public class TestController {
     private final TestService testService;
     @GetMapping("/test1")
     public ResultBody menuTest() {
+
+
         ResultBody<ShopDto> resultBody = new ResultBody<>();
         resultBody.setBody(testService.testShop());
         return resultBody;
@@ -31,6 +35,7 @@ public class TestController {
     static class ResultBody<T>{
         private T body;
         private LocalDateTime responseTime = LocalDateTime.now();
+        private String msg;
     }
 
 }

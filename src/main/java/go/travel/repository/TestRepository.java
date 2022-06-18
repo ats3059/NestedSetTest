@@ -2,7 +2,10 @@ package go.travel.repository;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import go.travel.domain.QShop;
+import go.travel.domain.QTravel;
 import go.travel.domain.Shop;
+import go.travel.domain.Travel;
+import go.travel.dto.QShopDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -12,6 +15,7 @@ import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 
 import static go.travel.domain.QShop.shop;
+import static go.travel.domain.QTravel.travel;
 
 @Repository
 public class TestRepository {
@@ -25,6 +29,8 @@ public class TestRepository {
     public Shop shopTest() {
         return query.selectFrom(shop).where(shop.depth.eq(1)).fetchOne();
     }
+
+
 
     //같은 루트에 해당되는 상위 메뉴들의 노드번호를 증가시킨다.
     public void menuUpdate(Shop menu,Integer id) {
